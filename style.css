@@ -1,0 +1,416 @@
+
+body {
+    position:fixed;
+    width: 100vw; height: 100vh;
+    background: rgb(240, 240, 240);
+}
+
+.panelOverlap {
+    display: none;
+    width: 100vw; height: 100vh;
+    background: rgb(240,240,240);
+    z-index: 4;
+}
+
+/* HEX RIGHT */
+/*
+.hexright {
+    position: fixed;
+    right: -3vw;
+    top: 3.4vw;
+    background: none;
+    width: 100px;
+    height: auto;
+}
+
+.hexblockx {
+    width: 10px;
+    height: 10px;
+    background: black;
+    margin-bottom: 10px;
+}
+
+.hexblockx:hover {
+    background: blue;
+    cursor: pointer;
+}
+*/
+
+/* HEX LEFT */
+
+.instructions h3 {
+    font-family: "atlas typewriter";
+    font-weight: 500;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    bottom: calc(5vh + 80px);
+    position: fixed;
+    left: 2.5vw;
+    width: 220px;
+    height: auto;
+    -webkit-transform: rotate(-90deg);
+}
+
+.instructions2 h3 {
+    font-family: "atlas typewriter";
+    font-weight: 500;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    position: fixed;
+    top: 13.5vh;
+    right: 1.8vw;
+    width: 220px;
+    height: auto;
+    -webkit-transform: rotate(90deg);
+}
+
+
+/*
+.hexleft {
+    bottom: 5vh;
+    position: fixed;
+    left: 3.5vw;
+    width: 100px;
+    height: auto;
+}
+
+.hexblock {
+    width: 10px;
+    height: 10px;
+    background: black;
+    margin-bottom: 10px;
+}
+
+.hexblock:hover {
+    background: blue;
+    cursor: pointer;
+}
+*/
+
+
+.wordwindow {
+    display: none;
+    position: fixed;
+    width: 20vw; height: auto;
+    padding: 10px;
+    left: 40vw; top: calc(50vh - 80px);
+     z-index: 2;
+/*    border: 2px solid black;*/
+}
+
+
+/* VANISH OUT ANIMATION */
+.wordwindow h2 {
+    font-family: "atlas typewriter";
+    font-size: 0.8em;
+    line-height: 1.5em;
+    font-weight: 300;
+    color: rgb(100, 100, 100);
+}
+
+/* X'S MOVING MANIFESTO VALUES*/
+
+.value {
+   position: absolute;
+    text-align: left;
+    left: 2vw; top: 3vw;
+    width: 20vw;
+    height: 200px;
+    background: black;
+    cursor: pointer; 
+    z-index: 2;
+}
+
+
+/*
+            .textinput {
+                position: fixed;
+                margin: auto;
+                z-index: 1;
+            }
+            
+            textarea {
+             position: fixed;
+             top: 50vh;
+             left: 50vw;
+             height: 800px;
+             font-family: "Atlas Typewriter";
+             font-size: 8.5pt;
+             line-height: 13pt;
+             color: blue;
+             border: 2px solid blue;
+             background-color: transparent;
+            }
+    
+*/
+
+/* TYPEWRITER TEXT */
+
+.var-highlight{
+	color: #C0AD60;
+}
+.string-highlight{
+	color: rgba(253, 149, 90, 0.8);
+}
+
+.mainManifesto {
+    width: 83vw;
+    height: auto;
+    margin-left: calc(3.5vw + 60px);
+    margin-top: 22vh;
+}
+
+b {
+    background: yellow;
+    color: black;
+    padding: 4px;
+}
+
+
+#main1{
+        font-family: "atlas typewriter";
+		font-size: 1.05em;
+        line-height: 1.9em;
+/*        font-size: 2vh;*/
+/*      margin-bottom: 22px;*/
+        margin-bottom: 2vh; margin-top: 2vh;
+        vertical-align: center;
+
+		&:after{
+			content: "|";
+			animation: blink 500ms linear infinite alternate;
+		}
+}
+
+/*
+#main2{
+        font-family: "atlas typewriter";
+		font-size: 1.15em;
+        line-height: 1.8em;
+        margin-bottom: 22px;
+
+		&:after{
+			content: "|";
+			animation: blink 500ms linear infinite alternate;
+		}
+}
+
+#main3{
+        font-family: "atlas typewriter";
+		font-size: 1.15em;
+        line-height: 1.8em;
+        margin-bottom: 22px;
+
+		&:after{
+			content: "|";
+			animation: blink 500ms linear infinite alternate;
+		}
+}
+
+
+#main4{
+        font-family: "atlas typewriter";
+		font-size: 1.15em;
+        line-height: 1.8em;
+		margin: 0;
+
+		&:after{
+			content: "|";
+			animation: blink 500ms linear infinite alternate;
+		}
+*/
+}
+
+
+
+.linebreak {
+    display: block;
+    line-height: 1.2em;
+}
+
+@-webkit-keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@-moz-keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@keyframes blink{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+
+
+            
+#sketchContainer {
+    float: left;
+    margin: auto;
+    vertical-align: center;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh; background:transparent;
+    overflow: visible;
+    z-index: 0;
+}
+
+/* Header */
+
+.headerwrap {
+    position: fixed;
+    width: 100vw;
+    font-family: "atlas grotesk", sans-serif;
+    font-size: 2.2em;
+    -webkit-transition-duration: 1s;
+    z-index: 5;
+}
+
+.headerleft {
+    float: left;
+    margin-left: 1vw;
+    cursor: pointer;
+}
+
+.headerright {
+    float: right;
+    margin-right: 2vw;
+}
+
+
+/* Left Column Content */
+
+.leftcol {
+   position: fixed;
+   font-family: sans-serif;
+   font-size: 1.2em;
+   line-height: 1.3em;
+   width: 30vw; height: 100vh;
+   margin-left: 2vw;
+   margin-top: 14vh;
+   overflow: scroll;
+}
+
+/*
+.red {
+    padding-bottom: 3px;
+    border-bottom: 6px solid black;
+}
+*/
+
+.arrowLeft {
+    float: left;
+    margin-top: 5vh;
+    margin-left: 2.5vw;
+    width: 60px;
+}
+
+
+.arrowRight {
+    float: right;
+    margin-top: 6vh;
+    margin-right: 5vw;
+    width: 60px;
+}
+
+
+.headerwrap:hover {
+    margin-left: 3vw;
+    cursor: pointer;
+}
+
+
+
+/* Footer */
+
+.footerwrap {
+    position: fixed;
+    width: 100vw;
+    margin-bottom: -1.4vh;
+    bottom: 2vh; left: 2vw;
+    font-family: "atlas grotesk", sans-serif;
+    font-size: 2.2em;
+    -webkit-transition-duration: 1s;
+    z-index: 5;
+}
+
+.footerleft {
+    float: left;
+}
+
+.footerright {
+    float: right;
+    margin-right: 1vw;
+    -webkit-transform: rotate(180deg);
+}
+
+.footerwrap:hover {
+    margin-left: -3vw;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+
+/* MOBILE BREAKPOINTS */
+
+@media(max-width: 1200px) {
+
+    #main1 {
+        font-size: 2vh;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+    }
+
+}
+
+@media(max-width: 1000px) {
+
+    #main1 {
+        font-size: 1.9vh;
+        line-height: 1.85em;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+    }
+
+}
+
+@media(max-width: 800px) {
+
+    #main1 {
+        width: 70vw;
+        font-size: 1.7vh;
+        line-height: 1.8em;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+    }
+
+}
+
+@media(max-width: 550px) {
+
+    #main1 {
+        width: 85vw;
+        font-size: 1.45vh;
+        line-height: 2.1em;
+        margin-left: -50px;
+        margin-top: -15vh;
+        margin-bottom: 2vh;
+    }
+
+    #sketchContainer {
+    float: left;
+    margin: auto;
+    vertical-align: center;
+    z-index: 1;
+    width: 50vw;
+    height: 50vh; background:transparent;
+    overflow: visible;
+    z-index: 0;
+}
+
+}

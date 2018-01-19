@@ -1,0 +1,280 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+    
+   <script language="javascript" type="text/javascript" src="addons/p5.js"></script>    
+    
+    <link rel="stylesheet" href="addons/magic.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    
+    <script language="javascript" src="addons/p5.dom.js"></script>
+    <script language="javascript" type="text/javascript" src="sketch.js"></script>
+  <!-- uncomment lines below to include extra p5 libraries -->
+
+
+  <!--<script language="javascript" src="../addons/p5.sound.js"></script>-->
+  
+  <!-- this line removes any default padding and style. you might only need one of these values set. -->
+        
+<title>The Moving Manifesto</title>
+    
+         <link rel="stylesheet" type="text/css" href="style.css"/>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    
+</head>
+
+<body>
+
+       <div class="headerwrap">
+            <img class="arrowLeft" src="images/arrow.png"><div class="headerleft"><h3>This is a<br><span class="red">Moving Manifesto.</span></h3></div>
+            <div class="headerright"><h3></h3></div>
+        </div>
+    
+        <div class="footerwrap">
+            <div class="footerleft"><h3> </h3></div>
+            <img class="arrowRight" src="images/arrow2.png"><div class="footerright"><h3>This is X's<br><span class="red">Moving Manifesto.</span></h3></div>
+        </div>
+        
+     <div class="panelOverlap">
+        <div class="mainManifesto">
+        <p id="typewriter">
+            
+        <div id="main1">
+            This is for those who are unassured of their positions in the world; the population which identifies with <b>X</b>. <b>X</b> is interconnected but confused. Their cultures, beliefs, and modes of communication blend into each other. <b>X</b> is displaced. <b>X</b> is in transit. To belong is a privilege. <b>X</b> is born of fragmented communities—unable to identify with a specific one. There is an enduring need for the reorientation, reorganization, and reinvention of the self. The voice of tradition is large and permanent; there is no space for the undefined. The voice of the privileged is aggressive and unaccommodating, seeking to reconfigure their world. <b>X</b> makes a sound and goes unheard. Who speaks for <b>X</b> if they are neither <strong>A</strong> nor <strong>B</strong>? Who speaks for <b>X</b> if they’re both <strong>A</strong> and <strong>B</strong>? A population certain only of its uncertainty whispers through subversive channels. It collects nuance and metaphors, rally signs that won’t agitate. <b>X</b> is always circumventing power structures set in place by the command of an assertive singularity—pushing through schemas that try to write it out of history. How many whispers will amount to a shout? <b>X</b> exists in a state of continuous change, revising its paradigm as it traverses age and location. It reconstructs its axioms and recognizes that perspective evolves with experience. 
+        </div>
+        
+<!--
+        <div id="main2">
+            <b>X</b> is born of fragmented communities—unable to identify with a specific one. There is an enduring need for the reorientation, reorganization, and reinvention of the self. The voice of tradition is large and permanent; there is no space for the undefined. The voice of the privileged is aggressive and unaccommodating, seeking to reconfigure their world. <b>X</b> makes a sound and goes unheard.
+        </div>
+            
+        <div id="main3">
+            Who speaks for <b>X</b> if they are neither <b>A</b> nor <b>B?</b> Who speaks for <b>X</b> if they’re both <b>A</b> and <b>B?</b> A population certain only of its uncertainty whispers through subversive channels. It collects nuance and metaphors, rally signs that won’t agitate. <b>X</b> is always circumventing power structures set in place by the command of an assertive singularity—pushing through schemas that try to write it out of history. How many whispers will amount to a shout?
+        </div>
+
+        <div id="main4">
+            <b>X</b> exists in a state of continuous change, revising its paradigm as it traverses age and location. It reconstructs its axioms and recognizes that perspective evolves with experience.
+        </div>
+-->
+</p> 
+     </div>
+</div>  
+    
+<!--  Sketch Container  -->
+<div id="sketchContainer">
+</div>
+
+    
+<!--  MANIFESTO CONTAINER  -->
+
+    
+<div class="wordwindow">
+    
+<!--    <h2> This is for those who are unassured of their positions in the world; the population which identifies with <b>X</b>. <b>X</b> is interconnected but confused. Their cultures, beliefs, and modes of communication blend into each other. <b>X</b> is displaced.<b>X</b> is in transit. To belong is a privilege.</h2>-->
+    
+
+    <div class="value"><h2><strong>X is in translation:</strong><br></h2></div>
+    
+     <div class="value"><h2><strong>X expands outward:</strong><br>Addressing something bigger than itself, working towards a larger purpose.</h2></div>
+    
+    <div class="value"><h2><strong>X questions identity:</strong><br>Challenging the group mentality, resisting the impulse to be attached, labelled, or classified.</h2></div>
+    
+       
+    <div class="value"><h2><strong>X strives for flexibility:</strong><br>Responding to dynamic views, readily adapting to new parameters.</h2></div>
+    
+        <div class="value"><h2><strong>X values inclusion:</strong><br>Building spaces that embrace diverse backgrounds, actively deconstructing the canon.</h2></div>
+    
+        <div class="value"><h2><strong>X cultivates patience:</strong><br>Employing platforms that promote empathy and
+connection, listening before acting.</h2></div>
+    
+       <div class="value"><h2><strong>X celebrates subtlety:</strong><br>Focusing on meaning and complexity, rejecting bold, superficial decisions that obscure the message.</h2></div>
+    
+        <div class="value"><h2>In the spirit of transformation, <strong>X</strong> defines itself as such:</h2></div>
+    
+</div>
+    
+    
+
+    
+    
+    
+
+    <!--  X MANIFESTO VALUE TOGGLES  -->
+
+    <script>
+        $('.footerwrap').click(function () {
+            $('.panelOverlap').hide();
+            $('.wordwindow').fadeToggle(3000);
+            $('.instructions').show("slow");
+            $('.instructions2').show("slow");
+        }                     
+        )
+    </script>
+    
+    
+    <script>
+    
+        $('.value').click(function () {
+//        $(this).addClass('magictime vanishOut');
+//        $(this).next('.value').toggle(); 
+        $( this ).fadeOut(2000);
+        });
+    </script>
+        
+
+
+    <script>
+        $('.headerwrap').click(function () {
+            $('.panelOverlap').fadeToggle(2000);
+            $('.wordwindow').hide();
+            $('.instructions').toggle("slow");
+            $('.instructions2').toggle("slow");
+        }                     
+        )
+    </script>
+    
+    
+<!-- MAIN MANIFESTO PARA 1 -->    
+    <script>
+        	function setupTypewriter(t) {
+	    var HTML = t.innerHTML;
+
+	    t.innerHTML = "";
+
+	    var cursorPosition = 0,
+	        tag = "",
+	        writingTag = false,
+	        tagOpen = false,
+	        typeSpeed = 100,
+        tempTypeSpeed = 0;
+
+	    var type = function() {
+        
+	        if (writingTag === true) {
+	            tag += HTML[cursorPosition];
+	        }
+
+	        if (HTML[cursorPosition] === "<") {
+	            tempTypeSpeed = 0;
+	            if (tagOpen) {
+	                tagOpen = false;
+	                writingTag = true;
+	            } else {
+	                tag = "";
+	                tagOpen = true;
+	                writingTag = true;
+	                tag += HTML[cursorPosition];
+	            }
+	        }
+	        if (!writingTag && tagOpen) {
+	            tag.innerHTML += HTML[cursorPosition];
+	        }
+	        if (!writingTag && !tagOpen) {
+	            if (HTML[cursorPosition] === " ") {
+	                tempTypeSpeed = 0;
+	            }
+	            else {
+	                tempTypeSpeed = (Math.random() * typeSpeed) + 5;
+	            }
+	            t.innerHTML += HTML[cursorPosition];
+	        }
+	        if (writingTag === true && HTML[cursorPosition] === ">") {
+	            tempTypeSpeed = (Math.random() * typeSpeed) + 20;
+	            writingTag = false;
+	            if (tagOpen) {
+	                var newSpan = document.createElement("span");
+	                t.appendChild(newSpan);
+	                newSpan.innerHTML = tag;
+	                tag = newSpan.firstChild;
+	            }
+	        }
+
+	        cursorPosition += 1;
+	        if (cursorPosition < HTML.length - 1) {
+	            setTimeout(type, tempTypeSpeed);
+	        }
+
+	    };
+
+	    return {
+	        type: type
+	    };
+	}
+
+	var typer = document.getElementById('main1');
+
+	typewriter = setupTypewriter(main1);
+
+	typewriter.type();
+    
+    </script>
+
+    
+    
+    
+    
+    
+    
+<!--
+<div class="textinput">
+    <textarea>
+        What is your Manifesto?
+    </textarea>
+        </div>
+-->
+              
+           
+   <!--  HEX BLOCKS X's MOVING MANIFESTO  -->
+<!--
+<div class="hexright">    
+    <div class="hexblockx"></div>
+    <div class="hexblockx"></div>
+    <div class="hexblockx"></div>
+    <div class="hexblockx"></div>
+    <div class="hexblockx"></div>
+    <div class="hexblockx"></div>  
+    <div class="hexblockx"></div>   
+</div>
+-->
+    
+
+<!--
+<div class="hexleft">    
+    <div class="hexblock"></div>
+    <div class="hexblock"></div>
+    <div class="hexblock"></div>
+    <div class="hexblock"></div>      
+</div
+-->
+    
+<div class="instructions">
+    <h3>Click on the titles to toggle between the two parts of the Manifesto.</h3>
+</div> 
+    
+<div class="instructions2">
+    <h3>Click on the shape to navigate through the definitions.</h3>
+</div>    
+    
+    
+
+         
+    
+    
+            
+           
+           <!--PRINT
+           <script>$("#print-iframe").get(0).contentWindow.print();</script>
+        -->   
+
+           
+           <!--PRINT
+           <script>$("#print-iframe").get(0).contentWindow.print();</script>
+        -->       
+
+
+    
+</body>
+</html>
